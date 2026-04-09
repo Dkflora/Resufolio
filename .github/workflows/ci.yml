@@ -9,7 +9,7 @@ jobs:
          - name: Check out code
            uses: actions/checkout@v4
          - name: Build Image
-           run:  docker build -t dkflora/appfolio .
+           run:  docker build -t ${{secrets.DOCKER_USERNAME}}/appfolio .
          - name: List Images
            run:  docker images
            
